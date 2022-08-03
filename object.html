@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>object in JS</title>
+    <style>
+      .test1 {
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="test1">
+      <p id="demo"></p>
+      <p id="demo1"></p>
+    </div>
+    <p id="demo2" class="demo3"></p>
+    <script>
+      let obj = {
+        name: "Aditya",
+        age: 22,
+        company: "The Indian Express",
+        Address: {
+          home: "Bihar",
+          current: "Gr. noida",
+          calling: 7739296494,
+        },
+      };
+      document.getElementById("demo").innerHTML = obj.company + "  " + obj.age;
+      // document.getElementById('demo1').innerHTML = obj.age;
+      document.getElementById("demo2").innerHTML = obj.Address["current"];
+    </script>
+  </body>
+</html>

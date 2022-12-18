@@ -22,3 +22,10 @@
     text-decoration: none;
 }
 
+.show {
+    display: block;
+}
+
+dropdown:hover, .dropdown:focus {
+    background-color: #2980B9;
+  }

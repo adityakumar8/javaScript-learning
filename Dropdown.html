@@ -9,8 +9,8 @@
   </head>
   <body>
     <div class="container-btn">
-      <button onclick="clickButton()" class="dropdown" id="buttonDropdown">Dropdown</button>
-      <div class="dropdown-content">
+      <button onclick="clickButton()" class="dropdown">Dropdown</button>
+      <div id="button-Dropdown" class="dropdown-content">
         <a href="#home">Home</a>
         <a href="#html">HTML</a>
         <a href="#CSS">CSS</a>
@@ -18,10 +18,24 @@
       </div>
     </div>
     <script>
-      function clickButton() {
-        document.getElementById("buttonDropdown").innerHTML.classList.toggle("show"); 
-      }
-
+          function clickButton() 
+            var x = document.getElementById("button-Dropdown");
+            if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+          }
+          window.onclick = function (event) {
+            if (!event.target.matches(".dropdown")) {
+              var dropdowns = document.getElementsByClassName(".dropdown-content");
+              for (var i = 0; i < dropdowns.length; i++) {
+                var activeDropdown = dropdowns[i];
+                if (activeDropdown.classList.contains("show")) {
+                  activeDropdown.classList.remove("show");
+                }
+              }
+            }
+          };
     </script>
   </body>
 </html>
